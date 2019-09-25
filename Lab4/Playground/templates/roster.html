@@ -1,0 +1,44 @@
+<block> Roster Page </block>
+<body>
+
+    {% if grade_view == 0 %}
+
+    <ul>
+
+    {% for student in class_roster %}
+
+        <li><strong>Name: </strong> {{student[0]}}, <strong> Grade: </strong>{{student[1]}}, <strong> Class Standing: </strong> {{student[2]}}</li>li>
+        {% endfor %}
+
+
+    </ul>
+
+    {% endif %}
+
+    {% if grade_view == 1 %}
+
+    <ul>
+
+    {% for student in class_roster %}
+
+        <li><strong>Name: </strong> {{student[0]}}, <strong> Grade: </strong> {{student[1]}}</li>
+    {% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+    {% if grade_view == 2 %}
+
+    <ul>
+
+        {% for student in class_roster %}
+
+        <li><strong> Name: </strong>{{student[0]}}, <strong> Class Standing: </strong> {{student[2]}}</li>
+    {% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+</body>
